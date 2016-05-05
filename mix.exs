@@ -2,12 +2,16 @@ defmodule Keymaster.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :keymaster,
-     version: "0.0.1",
-     elixir: "~> 1.2",
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     deps: deps]
+    [
+      app: :keymaster,
+      version: "0.0.2",
+      elixir: "~> 1.2",
+      build_embedded: Mix.env == :prod,
+      start_permanent: Mix.env == :prod,
+      deps: deps,
+      description: description,
+      package: package,
+    ]
   end
 
   # Configuration for the OTP application
@@ -28,5 +32,21 @@ defmodule Keymaster.Mixfile do
   # Type "mix help deps" for more examples and options
   defp deps do
     []
+  end
+
+  defp description do
+    """
+    An opinionated OAuth 2.0 server for Elixir projects.
+    """
+  end
+
+  defp package do
+    [# These are the default files included in the package
+      name: :keymaster,
+      files: ["config", "lib", "test", ".gitignore", "LICENSE*", "mix.exs", "README*"],
+      maintainers: ["Austin S. Morris"],
+      licenses: ["MIT"],
+      links: %{"GitHub" => "https://github.com/austinsmorris/keymaster"},
+    ]
   end
 end
