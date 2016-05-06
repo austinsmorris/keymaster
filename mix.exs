@@ -31,7 +31,10 @@ defmodule Keymaster.Mixfile do
   #
   # Type "mix help deps" for more examples and options
   defp deps do
-    []
+    [
+      {:plug, "~> 1.0"},
+      {:poison, "~> 2.0"},
+    ]
   end
 
   defp description do
