@@ -1,3 +1,4 @@
+[![Stories in Ready](https://badge.waffle.io/austinsmorris/keymaster.png?label=ready&title=Ready)](https://waffle.io/austinsmorris/keymaster)
 # Keymaster
 
 An opinionated OAuth 2.0 server for Elixir projects.
